@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'socialicoregular';
+    src: url('socialico-webfont.eot');
+    src: url('socialico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('socialico-webfont.woff') format('woff'),
+         url('socialico-webfont.ttf') format('truetype'),
+         url('socialico-webfont.svg#socialicoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Common Styles */
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "ff-meta-web-pro", helvetica, sans-serif;
+  color: #fff;
+  font-size: 10pt;
+  }
+
+body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: #6b6666;
+  background: -moz-radial-gradient(center, ellipse cover, #6b6666 0%, #3a3333 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#6b6666), color-stop(100%,#3a3333));
+  background: -webkit-radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
+  background: -o-radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
+  background: radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6666', endColorstr='#3a3333',GradientType=1 );
+  }
+
+a {
+  text-decoration: none;
+  color: #ddd;
+  }
+  
+html {
+  height: 100%;
+  overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+   }
+
+p {
+  margin: 0 0 8px;}
+
+#projects a {
+  /* to deal with line-height issues */
+  line-height: 0 !important;
+  margin: 0 !important;
+}
+
+.smooth {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -0-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.title {
+  font-size: 1.7em;
+  text-decoration: none;
+  }
+
+h1 {
+  font-size: 17px;
+  font-weight: normal;
+  }
+
+div.clear {
+  clear: left;
+  }
+
+div#copyright {
+  color: #999;
+  font-size: .75em;
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+  }
+
+#wrap {
+  width: 808px;
+  margin: 10px auto 0;
+  position: relative;
+  }
+
+.socialico a {
+  font-family: "socialicoregular";
+  font-size: 3.5em;
+  color: #333;
+}
+
+  .socialico a:hover {
+    color: #ddd;
+  }
+
+div#menu {
+  width: 150px;
+  height: 75px;
+  margin: 7% auto 30px;
+  }
+
+div.menutile {
+  float: left;
+  }
+  div.menutile:hover {
+    background-color: #4a4444;
+    }
+
+
+@media all and (max-width: 1400px) {
+    div.projectDetails p {
+    display: none;
+    }
+
+}
+
+
+@media all and (max-width: 808px) {
+
+  div#menu {
+    margin: 30px auto 30px;
+    }
+
+  div#projects, div#wrap {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  img.projectImage {
+    width: 100%;
+  }
+
+  a.fadehover {
+    width: 25%;
+  }
+
+    a.fadehover img {
+      width: 100%;
+    }
+
+  div#bioWrap {
+    width: 300px;
+    margin: 0 auto;
+}
+
+div#contactinfo {
+  margin: 10px 0 0 55px;
+}
+
+}
+
+
+/* Design Styles */
+
+
+#projects {
+  width: 808px;
+  margin: 0 auto;
+  position: relative;
+}
+
+div#projects a.fadehover {
+  height: 100%;
+  margin: 0 0 -3px;
+  float: left;
+}
+
+.projectDetails {
+  width: 100%;
+  display: none;
+  overflow: visible;
+  float: left;
+  margin: 0;
+  padding: 3% 0;
+}
+
+  .projectDetails p {
+    text-indent: -.7em;
+    opacity: 0;
+    position: relative;
+    width: 250px;
+    margin: 0 0 0 828px;
+  }
+  
+    div.projectDetails p + p {
+      padding: 15px 0 0 0;
+    }
+    
+    div.projectDetails p:before {
+      content: "+ ";
+      color: #aaa;
+    }
+
+.projectImage {
+  width: 808px;
+  float: left;
+  margin: 0 30px 0 0;
+}
+
+
+/* Contact Styles */
+
+
+  span.twitter {
+    list-style: none;
+    display: block;
+    padding: 5px;
+    }
+
+#bioPhoto {
+  float: left;
+}
+
+#rightColumn {
+  float: left;
+  width: 240px;
+  margin: 0 0 0 10px;
+}
+
+div#icons a {
+  display: block;
+}
+
+#contactinfo {
+  float: left;
+  margin: 10px 0 0 30px;
+}
+
+#bioWrap {
+  margin: 0 0 0 140px;
+}
