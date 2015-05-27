@@ -1,47 +1,41 @@
 $(document).ready(function(){
-	
 
 
-	//Fade out other elements when one is hovered 
-	$("a.fadehover").hover(
-		function() {
-			$(this).siblings().not("div.projectDetailsContainer").css({"opacity": ".3"}, "slow").addClass('smooth');
-			},
-		function() {
-			$(this).siblings().not("div.projectDetailsContainer").css({"opacity": "1"}, "slow");
-			}
-	);
+
+  //Fade out other elements when one is hovered
+  $("a.fadehover").hover(
+    function() {
+      $(this).siblings().not("div.projectDetailsContainer").addClass('faded');
+      },
+    function() {
+      $(this).siblings().not("div.projectDetailsContainer").removeClass('faded');
+      }
+  );
 
 
-	//Toggle project details div when icon is clicked 
-	$("a.fadehover").click(
-		function() {
-			//Sets a variable based on the icon clicked
-			var currentProjectName = $(this).children().attr("alt");
+  //Toggle project details div when icon is clicked
+  $("a.fadehover").click(
+    function(event) {
 
-			if (currentProjectName === currentProjectName) {
+      event.preventDefault();
 
-				//Slide all other projectDetails divs up out of sight
-				$("div.projectDetailsContainer").children().not(currentProjectName).stop().slideUp(900, 'swing', function(){
-					$("div.projectDetailsContainer").children().css("height", "auto");
+      //Sets a variable based on the icon clicked
+      var currentProjectName = $(this).children().attr("alt");
 
-					//Hide projectDetails descriptions
-					$("div.projectDetails p").animate({"opacity": "0"}, 0);
-				});
+      // Roll up all projects
+      $(".projectDetails").removeClass('rolledDown');
 
-				//Slide the corresponding clicked project div down into sight
-				$("#" + currentProjectName).stop().slideToggle(900, 'swing', function(){
-				
-					//Show projectDetails description
-					$("#" + currentProjectName + " p").animate({"opacity": "1"}, 900);
-					
-				});
-				
-				//Scroll to project top
-				$("html, body").animate({scrollTop: $(this).offset().top}, 1000);
-			}
-		}
-	);
+      // hide project paragraphs
+      $(".projectDetails p").removeClass('show');
 
-	
+      // Slide down current project
+      $("#" + currentProjectName).addClass('rolledDown');
+
+      // show project paragraphs
+      $("#" + currentProjectName + " p").addClass('show');
+
+    }
+  );
+
+
 });

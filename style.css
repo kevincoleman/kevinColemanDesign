@@ -21,24 +21,15 @@
   }
 
 body {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: auto;
   background: #6b6666;
-  background: -moz-radial-gradient(center, ellipse cover, #6b6666 0%, #3a3333 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#6b6666), color-stop(100%,#3a3333));
-  background: -webkit-radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
-  background: -o-radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
-  background: radial-gradient(center, ellipse cover, #6b6666 0%,#3a3333 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6666', endColorstr='#3a3333',GradientType=1 );
   }
 
 a {
   text-decoration: none;
   color: #ddd;
   }
-  
+
 html {
   height: 100%;
   overflow: -moz-scrollbars-vertical;
@@ -52,14 +43,6 @@ p {
   /* to deal with line-height issues */
   line-height: 0 !important;
   margin: 0 !important;
-}
-
-.smooth {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -0-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .title {
@@ -76,13 +59,13 @@ div.clear {
   clear: left;
   }
 
-div#copyright {
-  color: #999;
-  font-size: .75em;
-  width: 100%;
-  margin: 30px auto;
-  text-align: center;
-  }
+a.fadehover {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
 
 #wrap {
   width: 808px;
@@ -112,6 +95,98 @@ div.menutile {
   div.menutile:hover {
     background-color: #4a4444;
     }
+
+
+/* Design Styles */
+
+
+#projects {
+  width: 808px;
+  margin: 0 auto;
+  position: relative;
+}
+
+div#projects a.fadehover {
+  height: 100%;
+  margin: 0 0 -3px;
+  float: left;
+}
+
+.projectDetails {
+  -webkit-transition: 0.9s;
+  -moz-transition: 0.9s;
+  -ms-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+  .projectDetails p {
+    text-indent: -.7em;
+    opacity: 0;
+    position: relative;
+    width: 250px;
+    margin: 0 0 0 828px;
+    -webkit-transition: 0.9s;
+    -moz-transition: 1.2s;
+    -ms-transition: 1.2s;
+    -o-transition: 1.2s;
+    transition: 1.2s;
+  }
+
+    div.projectDetails p + p {
+      padding: 15px 0 0 0;
+    }
+
+    div.projectDetails p:before {
+      content: "+ ";
+      color: #aaa;
+    }
+
+.projectImage {
+  width: 808px;
+  float: left;
+  margin: 0 30px 0 0;
+}
+
+
+/* Contact Styles */
+
+
+  span.twitter {
+    list-style: none;
+    display: block;
+    padding: 5px;
+    }
+
+#bioPhoto {
+  float: left;
+}
+
+#rightColumn {
+  float: left;
+  width: 240px;
+  margin: 0 0 0 10px;
+}
+
+div#icons a {
+  display: block;
+}
+
+#contactinfo {
+  float: left;
+  margin: 10px 0 0 30px;
+}
+
+#bioWrap {
+  margin: 0 0 0 140px;
+}
+
 
 
 @media all and (max-width: 1400px) {
@@ -157,82 +232,18 @@ div#contactinfo {
 }
 
 
-/* Design Styles */
+/* Animation */
 
-
-#projects {
-  width: 808px;
-  margin: 0 auto;
-  position: relative;
+.faded {
+  opacity: 0.3;
 }
 
-div#projects a.fadehover {
-  height: 100%;
-  margin: 0 0 -3px;
-  float: left;
+.rolledDown {
+  max-height: 800px;
+  margin: 3% 0;
+  padding: 0 280px 0 0;
 }
 
-.projectDetails {
-  width: 100%;
-  display: none;
-  overflow: visible;
-  float: left;
-  margin: 0;
-  padding: 3% 0;
-}
-
-  .projectDetails p {
-    text-indent: -.7em;
-    opacity: 0;
-    position: relative;
-    width: 250px;
-    margin: 0 0 0 828px;
-  }
-  
-    div.projectDetails p + p {
-      padding: 15px 0 0 0;
-    }
-    
-    div.projectDetails p:before {
-      content: "+ ";
-      color: #aaa;
-    }
-
-.projectImage {
-  width: 808px;
-  float: left;
-  margin: 0 30px 0 0;
-}
-
-
-/* Contact Styles */
-
-
-  span.twitter {
-    list-style: none;
-    display: block;
-    padding: 5px;
-    }
-
-#bioPhoto {
-  float: left;
-}
-
-#rightColumn {
-  float: left;
-  width: 240px;
-  margin: 0 0 0 10px;
-}
-
-div#icons a {
-  display: block;
-}
-
-#contactinfo {
-  float: left;
-  margin: 10px 0 0 30px;
-}
-
-#bioWrap {
-  margin: 0 0 0 140px;
+.projectDetails.rolledDown p.show {
+  opacity: 1.0;
 }
