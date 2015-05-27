@@ -11,7 +11,7 @@ function Head($feed, $path)
     <meta name=\"viewport\" content=\"width=device-width\" />
     <meta name=\"keywords\" content=\"kevin coleman, kevin n. coleman, portfolio, graphic, design, art, web, walla walla, photography, print\" />
     <meta name=\"google-site-verification\" content=\"o44f3AcKhRh3nujf3xCibW0NBlYaNrXCLpT0-NcgwJY\" />
-    
+
     <link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" />
 
     <script type=\"text/javascript\" src=\"//use.typekit.net/ntp1hxp.js\"></script>
@@ -28,15 +28,21 @@ return;
 function OpenBody($path)
 {
   echo "<body>
-    <div id=\"menu\"> 
-      <div class=\"menutile\"><a href=\"".$path."design.php\"><img src=\"".$path."img/menu-home.png\" alt=\"Home\" /></a></div>
-      <div class=\"menutile\"><a href=\"".$path."contact.php\"><img src=\"".$path."img/menu-bio.png\" alt=\"Bio\" /></a></div>
-    </div> <!--menu-->";
+      <div id=\"contactinfo\">
+        <span class=\"title\">Kevin N. Coleman</span>&nbsp;&nbsp;
+        <div class=\"socialico\">
+        <a href=\"mailto:kevin.n.coleman@gmail.com\" class=\"smooth\" title=\"Email\">&nbsp;</a>
+          <a href=\"https://twitter.com/kevinncoleman\" target=\"_blank\" class=\"smooth\" title=\"Twitter\">l</a>
+          <a href=\"http://www.linkedin.com/in/kevinncoleman\" target=\"_blank\" class=\"smooth\" title=\"LinkedIn\">i</a>
+          <a href=\"https://github.com/kevincoleman\" target=\"_blank\" class=\"smooth\" title=\"gitHub\">g</a>
+          <a href=\"http://dribbble.com/kevincoleman\" target=\"_blank\" class=\"smooth\" title=\"Dribbble\">d</a>
+        </div> <!--socialico-->
+      </div> <!--contactinfo-->";
 return;
 }
-  
+
   //content here
-  
+
 function CloseBody()
 {
   echo "    <div class=\"clear\"> </div><!--clear-->

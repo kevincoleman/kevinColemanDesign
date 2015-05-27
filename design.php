@@ -4,6 +4,7 @@ Head('', '');
 OpenBody('');
 ?>
 
+
     <div id="wrap">
       <div id="projects">
 <?php
