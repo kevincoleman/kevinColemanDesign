@@ -1,23 +1,9 @@
-@font-face {
-    font-family: 'socialicoregular';
-    src: url('font/socialico-webfont.eot');
-    src: url('font/socialico-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/socialico-webfont.woff') format('woff'),
-         url('font/socialico-webfont.ttf') format('truetype'),
-         url('font/socialico-webfont.svg#socialicoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-/* Common Styles */
-
 * {
   border: 0;
   margin: 0;
   padding: 0;
   font-family: "ff-meta-web-pro", helvetica, sans-serif;
   color: #333;
-  font-size: 10pt;
   }
 
 body {
@@ -45,15 +31,12 @@ p {
   margin: 0 !important;
 }
 
-.title {
+h1 {
   font-size: 3em;
+  font-weight: normal;
   text-decoration: none;
   color: #333;
-  }
-
-h1 {
-  font-size: 17px;
-  font-weight: normal;
+  margin-bottom: .7em;
   }
 
 div.clear {
@@ -74,27 +57,26 @@ a.fadehover {
   position: relative;
   }
 
-.socialico {
-  display: inline-block;
-  position: relative;
-  top: 5px;
+#contactinfo {
+  max-width: 808px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
-.socialico a {
-  font-family: "socialicoregular";
-  font-size: 3.5em;
+#contactinfo #menu a {
+  display: inline;
   color: #333;
 }
 
-  .socialico a:hover {
-    color: #aaa;
-  }
+#contactinfo #menu a i {
+  font-size: 2.5em;
+}
 
-div#menu {
-  width: 150px;
-  height: 75px;
-  margin: 7% auto 30px;
-  }
+#contactinfo #menu a:hover i {
+  color: #aaa;
+}
 
 div.menutile {
   float: left;
@@ -161,6 +143,43 @@ div#projects a.fadehover {
   margin: 0 30px 0 0;
 }
 
+
+/* Contact Styles */
+
+
+  span.twitter {
+    list-style: none;
+    display: block;
+    padding: 5px;
+    }
+
+#bioPhoto {
+  float: left;
+}
+
+#rightColumn {
+  float: left;
+  width: 240px;
+  margin: 0 0 0 10px;
+}
+
+div#icons a {
+  display: block;
+}
+
+#contactinfo {
+  width: 808px;
+  margin: 3em auto .5em;
+  text-align: center;
+  line-height: 50px;
+}
+
+#bioWrap {
+  margin: 0 0 0 140px;
+}
+
+
+
 @media all and (max-width: 1400px) {
     div.projectDetails p {
     display: none;
@@ -192,13 +211,23 @@ div#projects a.fadehover {
       width: 100%;
     }
 
+  div#bioWrap {
+    width: 300px;
+    margin: 0 auto;
+}
+
+div#contactinfo {
+  width: 100%;
+  display: block;
+}
+
 }
 
 
 /* Animation */
 
 .faded {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .rolledDown {
